@@ -9,7 +9,7 @@ Type=simple
 User=prometheus
 Group=prometheus
 ExecReload=/bin/kill -HUP $MAINPID
-ExecStart={{ prometheus_binary_install_dir }}/prometheus \
+ExecStart={{ prometheus_binary_install_dir }}/prometheus-{{ prometheus_version }}.linux-amd64/prometheus \
   --storage.tsdb.path={{ prometheus_db_dir }} \
   --config.file={{ prometheus_config_dir }}/prometheus.yml
 

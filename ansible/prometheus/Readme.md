@@ -8,5 +8,5 @@ Assumptions:
 - The distro is Ubuntu 18.04
 
 Notes:
-- This will be bare minimum install. 
+- This will be bare a minimum install. 
 - Made with Ansible 2.9.6
