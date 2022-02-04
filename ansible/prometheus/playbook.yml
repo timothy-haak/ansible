@@ -1,0 +1,8 @@
+---
+- name: Starting playbook
+  hosts: all
+  become: True
+  roles: 
+  - { role: prometheus_install, tags: install }
+  - { role: prometheus_monitors, tags: monitors }
+
