@@ -5,16 +5,19 @@ Instructions:
 
 Assumptions:
 - The server is already running and the user executing the playbook has SSH access. 
-- The distro is Ubuntu 18.04
-- Node exporter is already running
-- We are using a static Ansible inventory
+- The distro is Ubuntu 18.04.
+- Node exporter is already running.
+- We are using a static Ansible inventory.
 
 Notes:
 - This will be bare a minimum install. 
-- Deployed with Ansible 2.9.6
+- Deployed with Ansible 2.9.6.
 - I broke the playbook up into 2 roles because I was thinking rule creation would happen frequently and was more steps than just updating a config. I could have just used tags and when statements instead. 
 
 # Installation
+
+**Update inventory to point to target host.**
+
 Full install run: 
 - ansible-playbook playbook.yml
 
@@ -73,5 +76,7 @@ PLAY RECAP *********************************************************************
 ```
 
 ## Rules
-https://user-images.githubusercontent.com/43687006/152647985-d862d913-985a-4f1c-ad73-d3228cc3af23.png
+
+![Rules!](https://user-images.githubusercontent.com/43687006/152647985-d862d913-985a-4f1c-ad73-d3228cc3af23.png)
+
 
