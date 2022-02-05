@@ -1,0 +1,20 @@
+groups:
+- name: monitors
+  rules:
+  - alert: HighNetworkUtil > 70%
+    # these expressions maybe inaccurate in terms of measurements but the concept of creating the rule is displayed
+    expr: (rate(node_network_receive_bytes_total{device="eth0"}[1m]) + rate(node_network_transmit_bytes_total{device="eth0"}[1m])) / 1000 > 0.7
+    for: 10m
+    labels:
+      severity: critical
+    annotations:
+      summary: primary network interface is at 70% utilization
+
+  - alert: HighDiskRW > 200mb/s
+    # these expressions maybe inaccurate in terms of measurements but the concept of creating the rule is displayed
+    expr: (rate(node_disk_read_bytes_total[1m])) + (rate(node_disk_written_bytes_total[1m])) / 1024 / 1024 > 200
+    for: 10m
+    labels:
+      severity: critical
+    annotations:
+      summary: Disk reads and writes are over 200mb/s
