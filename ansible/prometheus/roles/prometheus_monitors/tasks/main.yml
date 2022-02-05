@@ -1,0 +1,22 @@
+---
+- name: create prometheus custom config
+  template:
+    src: prometheus.yml.j2
+    dest: "{{ prometheus_config_dir }}/prometheus.yml"
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  notify:
+    - restart prometheus
+  tags: add_monitors
+
+- name: create rules config
+  template:
+    src: new.rules.yml.j2
+    dest: "{{ prometheus_config_dir }}/rules/new.rules.yml"
+    owner: prometheus
+    group: prometheus
+    mode: 0755
+  notify:
+    - restart prometheus
+  tags: add_rule
