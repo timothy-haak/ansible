@@ -12,7 +12,7 @@ Assumptions:
 Notes:
 - This will be bare a minimum install. 
 - Deployed with Ansible 2.9.6
-- I broke the playbook up into 2 roles because I was thinking rule creation would happend frequently and was more steps than just updating a config. I could have just used tags and when statements instead. 
+- I broke the playbook up into 2 roles because I was thinking rule creation would happen frequently and was more steps than just updating a config. I could have just used tags and when statements instead. 
 
 # Installation
 Full install run: 
