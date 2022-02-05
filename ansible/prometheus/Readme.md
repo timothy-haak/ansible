@@ -73,5 +73,5 @@ PLAY RECAP *********************************************************************
 ```
 
 ## Rules
-
+https://user-images.githubusercontent.com/43687006/152647985-d862d913-985a-4f1c-ad73-d3228cc3af23.png
 
